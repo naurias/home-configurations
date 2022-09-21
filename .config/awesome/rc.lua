@@ -48,7 +48,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "wezterm"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -60,6 +60,8 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
+beautiful.useless_gap = 3
+
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
@@ -569,7 +571,8 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 --
+
+-- 
 --
 --
---
--- awful.spawn.with_shell("feh --bg-fill ~/nixfiles/wallpapers/4.png")
+awful.spawn.with_shell("feh --bg-fill ~/Pictures/9.jpg")
